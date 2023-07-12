@@ -90,9 +90,15 @@ hr{
     flex: auto 1 0;
     text-align: end;
     margin-right: 50px;
-    margin-top: 10px;
     order: 2;
+    display: flex;
+    justify-content: end;
     
+}
+.six a{
+    height: 50px;
+    width: 50px;
+    display: block;
 }
 .navFlex .six img{
     
@@ -191,7 +197,7 @@ text-align: center;
 .gridContainer{
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: 300px minmax(50px, 300px);
+    grid-template-columns: 300px minmax(100px, 300px);
     column-gap: 3rem;
     grid-template-rows: 1fr 1fr 1fr;
     margin-right: 20px;
@@ -208,6 +214,10 @@ text-align: center;
     flex-direction: column;
     justify-content: center;
     
+}
+.gridContainer .resume-image-des{
+    align-items:  center;
+    width: 100%;
 }
 .gridContainer .resume-image-des img{
 width: 300px;
@@ -364,17 +374,74 @@ footer .otherContacts{
         flex: none;
         text-align: end;
     }
+    .navFlex{
+        padding-left: 0;
+    }
+    .navFlex .six{
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .six a{
+        height: 50px;
+        width: 50px;
+        display: block;
+    }
     .contact-container h3{
         font-size: 1.3rem;
     }
+    .gridContainer .resume-image-des img{
+        width: 150px;
+        }
+        .gridContainer .resume-image-des h4{
+            font-size: 1rem;
+        }
+        .gridContainer .resume-description p{
+            font-size: 0.75rem;
+        }
+        .gridContainer{
+            grid-template-columns: 150px minmax(100px, 300px);
+            column-gap: 1.5rem;
+        }
 }
-
+@media(max-width:600px){
+    
+    #Projects img{ 
+        width: 200px; 
+    }
+    #Interests img{ 
+        width: 200px; 
+    }
+    #Projects .image{
+        display: flex;
+        justify-content: center;
+    }
+    #Interests .image{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media(max-width:500px){
+ .contact-container h3{
+    font-size: 1rem;
+ }
+ #Projects .description p{
+    font-size: 0.9rem;
+ }
+ #Interests .description p{
+    font-size: 0.9rem;
+ }
+ .flex-container .item .description {
+    width: 300px;
+}
+}
 
 @media(max-width:1600px){
     #Projects .flex-container{
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     }
     #Interests .flex-container{
         display: flex;
